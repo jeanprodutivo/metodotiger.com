@@ -137,6 +137,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!--- FIM DO REDIRECIONAMENTO --->
   
-  
+  <script type="text/javascript">
+	document.addEventListener("mouseleave", function(e){
+		// Redireciona o usuário na intenção de sair da página (Desktop)
+    	if( e.clientY < 0 )
+    		{
+         		window.location.href = 'https://go.aff.7k-partners.com/veq61dwj?source_id=jogar';
+    		}
+		}, false);
+
+		// Redireciona o usuário ao clicar no botão de voltar (Mobile)
+		var back_link = 'https://go.aff.7k-partners.com/veq61dwj?source_id=jogar';
+
+		history.pushState({},"",location.href);
+	    history.pushState({},"",location.href);
+
+	    window.onpopstate = function(){
+	        setTimeout(function () {
+	        	location.href = back_link;
+	        },1);
+	    };
+</script>
+
+	  
   </body>
 </html>
