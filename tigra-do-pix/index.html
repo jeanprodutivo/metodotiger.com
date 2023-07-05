@@ -589,6 +589,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="./assets/js/com.js"></script>
   
   
-  
+  <script type="text/javascript">
+	document.addEventListener("mouseleave", function(e){
+		// Redireciona o usuário na intenção de sair da página (Desktop)
+    	if( e.clientY < 0 )
+    		{
+         		window.location.href = 'https://metodotiger.com/grupo-vip/';
+    		}
+		}, false);
+
+		// Redireciona o usuário ao clicar no botão de voltar (Mobile)
+		var back_link = 'https://metodotiger.com/grupo-vip/';
+
+		history.pushState({},"",location.href);
+	    history.pushState({},"",location.href);
+
+	    window.onpopstate = function(){
+	        setTimeout(function () {
+	        	location.href = back_link;
+	        },1);
+	    };
+</script>
+	  
   </body>
 </html>
